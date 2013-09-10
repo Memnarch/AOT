@@ -1,0 +1,72 @@
+groups
+{
+	group MainForm
+	{
+		Autodetect = "D\x00e9tection automatique"
+		"&File" = &Fichier
+		"&New" = &Nouveau
+		"&Open..." = &Ouvrir...
+		"&Save" = Enregi&strer
+		"Save &As..." = &Enregistrer sous...
+		"E&xit" = &Quitter
+		"&Build" = &Compilation
+		"&Deploy..." = "&D\x00e9ployer..."
+		"&Help" = Ai&de
+		"Overview of Deployment Tool" = "Vue d\'ensemble de l\'outil de d\x00e9ploiement"
+		Documentation = &Documentation
+		"&About..." = A &propos...
+		New = Nouveau
+		Open = Ouvrir
+		Save = Enregistrer
+		Deploy = "D\x00e9ployer"
+		"Deployment Tool" = "Outil de d\x00e9ploiement"
+		General = "G\x00e9n\x00e9ral"
+		"The default language:" = "La langue par d\x00e9faut:"
+		"User directory:" = "R\x00e9pertoire utilisateur:"
+		"(Recommended for web deployment)" = "(Recommand\x00e9 pour un d\x00e9ploiement web)"
+		"Deployment type:" = "Type de d\x00e9ploiement:"
+		"Archive the Data directory (zip archive)" = "Archive le r\x00e9pertoire Data (archive zip)"
+		"The directory name for the application\'s files inside system \"Users\" directory. Settings files, logs and all new files will be created in this directory. If this value is empty, new files will be created where executables are placed.\r\n- Windows XP: C:\\Documents and Settings\\{username}\\Application Data\\\r\n- Windows Vista/7: C:\\Users\\{username}\\AppData\\Local\\\r\n- Mac OS X: /Users/{username}/Library/Application Support/\r\nExample: \"My Great Game\"." = 
+		"Output directory:" = "Le r\x00e9pertoire de sortie:"
+		"..." = ...
+		Platforms = Plates-formes
+		"Platforms:" = "Plates-formes:"
+		Components = Composants
+		"Optional components:" = "Composants optionnels:"
+		Files = Fichiers
+		"For native libraries use template: \"{native}MyNativeDll.dll\"." = "Pour les biblioth\x00e8ques natives utiliser le template: \"{native}MyNativeDll.dll\"."
+		"Additional files and directories. You can specify patterns like \"MyAssembly*.dll\"." = 
+		"Deployment files (*.deployment)|*.deployment|All files (*.*)|*.*" = 
+		"http://www.neoaxis.com/wiki/Documentation" = 
+		"http://www.neoaxis.com/wiki/Documentation/Articles/Overview_of_Deployment_Tool" = 
+		"Standalone Application" = Applicazione Standalone
+		"Web Deployment" = Web Deployment
+		"Deploy to the \"{0}\"?\n\nAll data will be deleted from this path during deployment!\n\nBefore deployment is recommended to recompile the shader cache by means ShaderCacheCompiler.exe." = 
+		Untitled = Sans_titre
+		"Save file \"{0}\"?" = "Enregistrer le fichier \"{0}\"?"
+		"Are you sure you want to delete path \"{0}\"?" = 
+		"Unable to save file \"{0}\"." = Impossible de sauvegarder le fichier.
+		"Unable to deploy! The output path is not specified." = 
+		"Unable to deploy! Unable to create directory \"{0}\"." = 
+		"Unable to deploy! No platform selected." = 
+		"Unable to deploy! Component \"{0}\" is not support Windows 64-bit." = 
+		"Unable to deploy! Unable to deploy to Windows and Mac at the same time. Please disable one of selected platforms." = 
+		Component = Composant
+		Web = Web
+	}
+	group AboutBox
+	{
+		About = A &propos...
+	}
+	group DeployForm
+	{
+		"Cleaning output directory..." = "Nettoyage r\x00e9pertoire de sortie..."
+		"Copying files..." = Copie de fichiers...
+		"Making \"{0}\"..." = "Faire \"{0}\"..."
+		"Deployment complete." = "D\x00e9ploiement complet."
+		Deploy = "D\x00e9ployer"
+		"Archiving the Data directory..." = "En archivant l\'annuaire Data..."
+		"Making web deployment package..." = "Faire package de d\x00e9ploiement web..."
+		"ERROR: {0}" = "ERREUR: {0}"
+	}
+}
