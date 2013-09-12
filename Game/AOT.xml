@@ -9,11 +9,6 @@
             Defines a about us window.
             </summary>
         </member>
-        <member name="T:AOT.ProductLogoWindow">
-            <summary>
-            Defines a your project logo window.
-            </summary>
-        </member>
         <member name="T:AOT.GameEngineApp">
             <summary>
             Defines a game application.

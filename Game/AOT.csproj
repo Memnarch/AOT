@@ -162,7 +162,6 @@
     <Compile Include="MultiplayerLobbyWindow.cs" />
     <Compile Include="MultiplayerLoginWindow.cs" />
     <Compile Include="WorldLoadSaveWindow.cs" />
-    <Compile Include="ProductLogoWindow.cs" />
     <Compile Include="GameEngineApp.cs" />
     <Compile Include="MapsWindow.cs" />
     <Compile Include="MenuWindow.cs" />

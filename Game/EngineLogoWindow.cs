@@ -15,7 +15,7 @@ namespace AOT
 	/// </summary>
 	public class EngineLogoWindow : Control
 	{
-		const float lifeTime = 10;
+		const float lifeTime = 5;
 		Texture engineTexture;
 
 		//
@@ -40,7 +40,7 @@ namespace AOT
 				return true;
 			if( e.Key == EKeys.Escape || e.Key == EKeys.Return || e.Key == EKeys.Space )
 			{
-				Destroy( true );
+				Destroy();
 				return true;
 			}
 			return false;
@@ -50,7 +50,7 @@ namespace AOT
 		{
 			if( button == EMouseButtons.Left || button == EMouseButtons.Right )
 			{
-				Destroy( true );
+				Destroy();
 				return true;
 			}
 			return base.OnMouseDown( button );
@@ -60,25 +60,17 @@ namespace AOT
 		{
 			base.OnTick( delta );
 			if( Time > lifeTime )
-				Destroy( false );
+				Destroy();
 		}
 
-		void Destroy( bool breaked )
+		void Destroy()
 		{
 			SetShouldDetach();
-			if( breaked )
-			{
-				EngineApp.Instance.MouseRelativeMode = false;
-				EngineApp.Instance.MousePosition = new Vec2( .9f, .8f );
+			EngineApp.Instance.MouseRelativeMode = false;
+			EngineApp.Instance.MousePosition = new Vec2( .9f, .8f );
 
-				//go to main menu
-				GameEngineApp.Instance.ControlManager.Controls.Add( new MainMenuWindow() );
-			}
-			else
-			{
-				//go to product logo window
-				GameEngineApp.Instance.ControlManager.Controls.Add( new ProductLogoWindow() );
-			}
+			//go to main menu
+			GameEngineApp.Instance.ControlManager.Controls.Add( new MainMenuWindow() );
 		}
 
 		protected override void OnRenderUI( GuiRenderer renderer )
@@ -93,12 +85,12 @@ namespace AOT
 
 			float alpha = 0;
 
-			if( Time > 2 && Time <= 3 )
-				alpha = Time - 2;
-			else if( Time > 3 && Time <= lifeTime - 2 - 2 )
+			if( Time > 1 && Time <= 2 )
+				alpha = Time - 1;
+			else if( Time > 2 && Time <= lifeTime-2)
 				alpha = 1;
-			else if( Time >= lifeTime - 2 - 2 && Time < lifeTime - 1 )
-				alpha = 1 - ( Time - ( lifeTime - 2 - 2 ) ) / 3;
+			else if( Time >= lifeTime-2 && Time < lifeTime)
+				alpha = 1 - ( Time - ( lifeTime-2) );
 
 			if( alpha != 0 )
 				renderer.AddQuad( rectangle, new Rect( 0, 0, 1, 1 ), engineTexture,

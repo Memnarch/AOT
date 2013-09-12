@@ -176,9 +176,9 @@ namespace AOT
 			{
 				float alpha = 0;
 
-				if( Time > 3 && Time <= 5 )
-					alpha = ( Time - 3 ) / 2;
-				else if( Time > 4 )
+				if( Time > 1 && Time <= 3 )
+					alpha = ( Time - 1 );
+				else if( Time > 3 )
 					alpha = 1;
 
 				window.ColorMultiplier = new ColorValue( 1, 1, 1, alpha );
