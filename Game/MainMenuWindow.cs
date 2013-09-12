@@ -86,9 +86,6 @@ namespace AOT
 				checkBox.Click += checkBoxShowBackgroundMap_Click;
 			}
 
-			//play background music
-			GameMusic.MusicPlay( "Sounds\\Music\\MainMenu.ogg", true );
-
 			//update sound listener
 			SoundWorld.Instance.SetListener( new Vec3( 1000, 1000, 1000 ),
 				Vec3.Zero, new Vec3( 1, 0, 0 ), new Vec3( 0, 0, 1 ) );

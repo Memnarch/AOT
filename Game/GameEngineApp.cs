@@ -510,7 +510,6 @@ namespace AOT
 			//if no autorun map play music and go to EngineLogoWindow.
 			if( Map.Instance == null && !mapLoadingFailed )
 			{
-				GameMusic.MusicPlay( "Sounds\\Music\\MainMenu.ogg", true );
 				controlManager.Controls.Add( new EngineLogoWindow() );
 			}
 
