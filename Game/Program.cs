@@ -24,21 +24,15 @@ namespace AOT
 		[STAThread]
 		static void Main()
 		{
-			if( Debugger.IsAttached )
+
+			try
 			{
 				Main2();
 			}
-			else
+			catch( Exception e )
 			{
-				try
-				{
-					Main2();
-				}
-				catch( Exception e )
-				{
-					Log.FatalAsException( e.ToString() );
-				}
-			}
+				Log.FatalAsException( e.ToString() );
+            }		
 		}
 
 		static void Main2()
