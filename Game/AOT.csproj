@@ -157,18 +157,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutWindow.cs" />
+    <Compile Include="Forms\AboutWindow.cs" />
     <Compile Include="GuiFileNames.cs" />
-    <Compile Include="MultiplayerLobbyWindow.cs" />
-    <Compile Include="MultiplayerLoginWindow.cs" />
-    <Compile Include="WorldLoadSaveWindow.cs" />
+    <Compile Include="Forms\MultiplayerLobbyWindow.cs" />
+    <Compile Include="Forms\MultiplayerLoginWindow.cs" />
+    <Compile Include="Forms\WorldLoadSaveWindow.cs" />
     <Compile Include="GameEngineApp.cs" />
-    <Compile Include="MapsWindow.cs" />
-    <Compile Include="MenuWindow.cs" />
-    <Compile Include="MessageBoxWindow.cs" />
-    <Compile Include="OptionsWindow.cs" />
-    <Compile Include="GameWindow.cs" />
-    <Compile Include="MainMenuWindow.cs" />
+    <Compile Include="Forms\MapsWindow.cs" />
+    <Compile Include="Forms\MenuWindow.cs" />
+    <Compile Include="Forms\MessageBoxWindow.cs" />
+    <Compile Include="Forms\OptionsWindow.cs" />
+    <Compile Include="Forms\GameWindow.cs" />
+    <Compile Include="Forms\MainMenuWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -190,8 +190,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="RTSGameWindow.cs" />
-    <Compile Include="EngineLogoWindow.cs" />
+    <Compile Include="Forms\RTSGameWindow.cs" />
+    <Compile Include="Forms\EngineLogoWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo.ico" />
