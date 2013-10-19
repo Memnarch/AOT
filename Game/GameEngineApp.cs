@@ -899,9 +899,9 @@ namespace AOT
 			GameWindow gameWindow = null;
 
 
-			gameWindow = new RTSGameWindow();
+            gameWindow = new AOTGameWindow();
 
-			controlManager.Controls.Add( gameWindow );
+            controlManager.Controls.Add(gameWindow);
 		}
 
 		public void DeleteAllGameWindows()
@@ -1022,13 +1022,6 @@ namespace AOT
 
 			if( !noChangeWindows )
 				CreateGameWindowForMap();
-
-			//play music
-			if( !noChangeWindows )
-			{
-				if( GameMap.Instance != null )
-					GameMusic.MusicPlay( GameMap.Instance.GameMusic, true );
-			}
 
 			EntitySystemWorld.Instance.ResetExecutedTime();
 
