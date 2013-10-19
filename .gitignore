@@ -31,5 +31,7 @@ _ReSharper*/
 game/bin/
 game/UserSettings/
 game/NativeDlls/
+game/Data/*
 *.xml
 *.config
+!game/data/aot
