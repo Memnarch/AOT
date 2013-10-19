@@ -39,6 +39,11 @@ namespace AOT
 
 		//
 
+        protected bool IsPaused()
+        {
+            return Controls.Count > 0;
+        }
+
 		public static GameWindow Instance
 		{
 			get { return instance; }
@@ -68,7 +73,7 @@ namespace AOT
 
 		protected override bool OnKeyDown( KeyEvent e )
 		{
-			if( Controls.Count != 1 )
+			if( IsPaused() )
 				return base.OnKeyDown( e );
 
 			if( e.Key == EKeys.Escape )
@@ -104,7 +109,7 @@ namespace AOT
 		{
 			base.OnTick( delta );
 
-			if( Controls.Count != 1 )
+			if( IsPaused() )
 				return;
 
 			EntitySystemWorld.Instance.Tick();
@@ -278,7 +283,7 @@ namespace AOT
 		protected override bool OnMouseDown( EMouseButtons button )
 		{
 			//If atop openly any window to not process
-			if( Controls.Count != 1 )
+			if( IsPaused() )
 				return base.OnMouseDown( button );
 
 			if( base.OnMouseDown( button ) )
@@ -300,7 +305,7 @@ namespace AOT
 		protected override bool OnMouseUp( EMouseButtons button )
 		{
 			//If atop openly any window to not process
-			if( Controls.Count != 1 )
+			if( IsPaused() )
 				return base.OnMouseUp( button );
 
 			//free camera rotating
@@ -318,7 +323,7 @@ namespace AOT
 			base.OnMouseMove();
 
 			//If atop openly any window to not process
-			if( Controls.Count != 1 )
+			if( IsPaused() )
 				return;
 
 			//free camera rotating
