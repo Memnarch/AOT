@@ -44,14 +44,11 @@ namespace AOT
 			BackColor = new ColorValue( 0, 0, 0, .5f );
 			MouseCover = true;
 
-			string[] mapList = VirtualDirectory.GetFiles( "", "*.map", SearchOption.AllDirectories );
+			string[] mapList = VirtualDirectory.GetFiles( "AOT\\Maps", "*.map", SearchOption.AllDirectories );
 
 			//maps listBox
 			{
 				listBoxMaps = (ListBox)window.Controls[ "List" ];
-
-				//dynamic map example
-				listBoxMaps.Items.Add( dynamicMapExampleText );
 
 				foreach( string name in mapList )
 				{
@@ -240,17 +237,11 @@ namespace AOT
 
 		void RunMap( string name )
 		{
-			if( name == dynamicMapExampleText )
-			{
-				GameEngineApp.Instance.SetNeedMapCreateForDynamicMapExample();
-			}
-			else
-			{
-				UpdateRecentlyLoadedMapsList( name );
 
-				//begin loading a map
-				GameEngineApp.Instance.SetNeedMapLoad( name );
-			}
+			UpdateRecentlyLoadedMapsList( name );
+
+			//begin loading a map
+			GameEngineApp.Instance.SetNeedMapLoad( name );
 		}
 
 		protected override bool OnKeyDown( KeyEvent e )
